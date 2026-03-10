@@ -2,12 +2,17 @@
 
 ## Projektin tavoite
 
-Rakennat **Event Management System** -sovelluksen, jossa:
-- Käyttäjät voivat rekisteröityä ja kirjautua
-- Käyttäjät voivat luoda tapahtumia
-- Käyttäjät voivat liittyä tapahtumiin
-- Admin-käyttäjät voivat hallinnoida kaikkea
-- Kaikki toiminnot testataan kattavasti
+Rakennat **IT Support Ticket Tracker** -sovelluksen, joka toimii portfolioprojektina Junior QA / Test Automation -roolia varten.
+
+Sovelluksen ominaisuudet:
+- Käyttäjät voivat luoda, katsella ja päivittää tukipyyntöjä (tickets)
+- Tiketit sisältävät otsikon, kuvauksen, prioriteetin ja statuksen
+- Yksinkertainen ja selkeä arkkitehtuuri
+
+**Pääfokus on testaus**, ei fullstack-kehitys. Sovellus rakennetaan siksi, että sinulla on realistinen kohde, jota voit testata:
+- **Playwright** — UI-automaatiotestaus
+- **Supertest / Postman** — API-testaus
+- **GitHub Actions** — CI/CD-pipeline
 
 Tämä dokumentti on oppimispolkusi. Etene järjestyksessä.
 
@@ -710,21 +715,39 @@ Nyt tunnet JavaScript-perusteet:
 
 ---
 
-# Seuraava vaihe
+# Seuraava vaihe: Vaihe 2 — Node.js + Express.js Backend
 
-Kun olet lukenut ja ymmärtänyt nämä perusteet, ilmoita minulle niin siirrymme **Vaihe 2: Node.js ja Express.js** -osioon.
+Kun olet lukenut ja ymmärtänyt JS-perusteet, siirrymme backendin rakentamiseen.
 
-Vaiheessa 2 opit:
-- Node.js:n perusteet
-- Express.js-palvelimen luominen
-- REST API:n rakentaminen
-- Reititys ja middleware
-- HTTP-metodit (GET, POST, PUT, DELETE)
+## Vaihe 2: Backend (Node.js + Express.js)
+- Projektin alustus (`npm init`)
+- Express.js-palvelimen luominen (`server.js`)
+- Health-check endpoint (`GET /api/health`)
+- Ticket CRUD -endpointit (GET, POST, PUT, DELETE)
+- Middleware ja reititys
+
+## Vaihe 3: Tietokanta (PostgreSQL)
+- PostgreSQL-yhteys
+- Ticket-taulu ja migraatiot
+- CRUD tietokannalla
+
+## Vaihe 4: React Frontend
+- Yksinkertainen UI tikettien hallintaan
+- Lomakkeet ja listasnäkymä
+- API-kutsut backendiin
+
+## Vaihe 5: Testaus (pääfokus!)
+- Playwright — UI-automaatiotestit
+- Supertest — API-testaus
+- Jest — yksikkötestit
+- Testausstrategian dokumentointi
+
+## Vaihe 6: CI/CD (GitHub Actions)
+- Testien ajaminen automaattisesti
+- CI/CD-pipeline
 
 ---
 
 ## Kysymyksiä?
 
 Jos jokin kohta jäi epäselväksi, kysy rohkeasti! Selitän esimerkkien avulla.
-
-Voit myös pyytää lisää harjoituksia mistä tahansa aiheesta.
